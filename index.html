@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- JS -->
+    <script defer src="./js/torrentManager.js"></script>
+    <script defer src="./js/classes/storage/StorageManager.js"></script>
+    <script defer src="./js/classes/Torrent.js"></script>
+    <title>Ejercicio Torrents</title>
+  </head>
+<body>
+  <div class="logo">
+    <div class="logo_img">
+      <img src="./img/pngegg.png" alt="">
+    </div>
+  </div>
+  <main>
+  <div class="content">
+    <div class="form">
+      <form id="form">
+        <div class="text">
+          <input type="text" id="title" autocomplete="off" placeholder="Título" />
+          <input type="text" id="percentage" autocomplete="off" placeholder="Porcentaje"/>
+          <input type="text" id="size" autocomplete="off" placeholder="Tamaño Total en bytes"/>
+        </div>
+      <div class="select">
+        <select id="type_of_file">
+          <option value="1">JPG</option>
+          <option value="2">AVI</option>
+          <option value="3">MP4</option>
+        </select>
+      </div>
+      <input class="btn" type="button" onclick="createTorrent();" value="Enviar" />
+      <span id="texto"><h3>Revisa los campos en rojo</h3></span>
+      <span id="texto2"><h3>El porcentaje es incorrecto, introduce un porcentaje entre 0 y 100</h3></span>
+      </form>
+    </div>
+    <div class="info">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Título<span class="material-icons title">arrow_drop_down</span></th>
+            <th>% Completado<span class="material-icons percentage">arrow_drop_down</span></th>
+            <th>Tamaño(bytes)</th>
+            <th>Tipo Archivo</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="table">
+          <!-- GENERATED WITH JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </main>
+</body>
+</html>
